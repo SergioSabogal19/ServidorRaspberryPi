@@ -1,0 +1,39 @@
+=<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Control Raspberryt</title>
+</head>
+<body>
+    <header>
+        
+        <nav class="navegacion">
+            <a class="nav-enlace nav-enlace_activo" href="http://c955-161-18-133-64.ngrok-free.app">Programa Inicial</a>
+            <a class="nav-enlace" href="motor">Motor DC</a>
+            <a class="nav-enlace" href="servo">Servo Motor</a>
+            <a class="nav-enlace" href="sensor">Sensor RTC</a>
+            <a class="nav-enlace" href="temp">Sensor de Temperatura</a>   
+        </nav>
+    </header>
+    <div id="particles-js"></div>
+
+    <main class="contenedor">
+        <div>
+            <h1 class="titulo"> 
+                Laboratorio Control de Rapsberry 
+            </h1>
+            <img src="{{ url_for('static', filename='img/raspberry.png') }}" alt="imagen">
+            <h2>Control de raspberry mediante protocolo HTTP </h2>
+            <p>Navegue a traves del menu superior para efectuar el control de los distintos sensores y actuadores conectados. <br>
+            Control de <b> Motor DC </b>, control de Servomotor, pedir datos de Sensor RTC por medio de I2C,  sensor de temperatura TPM36GZ a traves de un convertidor ADC I2C.
+            </p>
+        </div>
+    </main>
+    
+    <script src="{{ url_for('static', filename='particles.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

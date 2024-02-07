@@ -1,0 +1,41 @@
+=<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Control Raspberryt</title>
+</head>
+<body>
+    <header>
+        
+        <nav class="navegacion">
+            <a class="nav-enlace" href="http://c955-161-18-133-64.ngrok-free.app">Programa Inicial</a>
+            <a class="nav-enlace" href="motor">Motor DC</a>
+            <a class="nav-enlace nav-enlace_activo" href="servo">Servo Motor</a>
+            <a class="nav-enlace" href="sensor">Sensor RTC</a>
+            <a class="nav-enlace" href="temp">Sensor de Temperatura</a>  
+        </nav>
+    </header>
+    <div id="particles-js"></div>
+
+    <main class="contenedor">
+        <div>
+            <h1 class="titulo">Control de Servomotor </h1>
+       
+            <img src="{{ url_for('static', filename='img/SG90-compressor-removebg-preview.png') }}" alt="imagen">
+        </div>
+        
+        <form action="/controlar_servo" id="servoForm" method="post">
+            <label class="tittle--label__servo" for="angulo">Angulo </label>
+            <input class="tittle--input__servo" type="range" name="angulo" id="angulo" min="0" max="180" step="1" value="1" />
+            <output class="valor-output-angulo" id="outputAngulo" for="angulo"></output>
+        </form>
+
+        
+    </main>
+    <script src="{{ url_for('static', filename='particles.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="{{ url_for('static', filename='servo.js') }}"></script>
+</body>
+</html>

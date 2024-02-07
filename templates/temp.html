@@ -1,0 +1,36 @@
+=<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Control Raspberryt</title>
+</head>
+<body>
+    <header>
+        
+        <nav class="navegacion">
+            <a class="nav-enlace " href="http://c955-161-18-133-64.ngrok-free.app">Programa Inicial</a>
+            <a class="nav-enlace" href="motor">Motor DC</a>
+            <a class="nav-enlace" href="servo">Servo Motor</a>
+            <a class="nav-enlace" href="sensor">Sensor RTC</a>
+            <a class="nav-enlace nav-enlace_activo" href="temp">Sensor de Temperatura</a>    
+        </nav>
+    </header>
+    <div id="particles-js"></div>
+
+    <main class="contenedor">
+        <h1 class="titulo"> 
+            Sensor de Temperatura 
+        </h1>
+        <div>      
+            <img src="{{ url_for('static', filename='img/TMP.png') }}" alt="imagen">
+        </div>
+        <p class"temperatura" id"temp">{{salida}}</p>
+    </main>
+    
+    <script src="{{ url_for('static', filename='particles.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="{{ url_for('static', filename='temp.js') }}"></script>
+</body>
+</html>

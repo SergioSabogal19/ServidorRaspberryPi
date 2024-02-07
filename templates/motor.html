@@ -1,0 +1,63 @@
+=<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Control Raspberry</title>
+</head>
+<body>
+    <header>
+        
+        <nav class="navegacion">
+            <a class="nav-enlace" href="http://c955-161-18-133-64.ngrok-free.app">Programa Inicial</a>
+            <a class="nav-enlace nav-enlace_activo" href="motor">Motor DC</a>
+            <a class="nav-enlace" href="servo">Servo Motor</a>
+            <a class="nav-enlace" href="sensor">Sensor RTC</a>
+            <a class="nav-enlace" href="temp">Sensor de Temperatura</a>    
+        </nav>
+    </header>
+    <div id="particles-js"></div>
+
+    <main class="contenedor">
+        <h1 class="titulo"> 
+            Control de Motor DC 
+        </h1> 
+        <section class="container">
+            <div class="container--img">      
+                <img src="{{ url_for('static', filename='img/DC.png') }}" alt="imagen">
+            </div>
+            <div class="container--form">
+                <form action="/controlar_motor" id="motorForm" method="post">
+                        <div class="seccion">
+                            <div class="seccion--motot_1">
+                                <h2>Dirección</h2>
+                                <label class="tittle--label">
+                                    <input id="dirDerecha" class="tittle--input" type="radio" name="direccion" value="derecha"> Derecha
+                                </label>
+                                <label class="tittle--label">
+                                    <input id="dirIzquierda" class="tittle--input" type="radio" name="direccion" value="izquierda"> Izquierda
+                                </label>
+                    
+                    
+                            </div>
+                            <div class="seccion--motor_2">
+                    
+                                <label class="tittle--label" for="velocidad">Velocidad </label>
+                                <input class="tittle--input" type="range" name="velocidad" id="velocidad" min="0" max="100" step="1"
+                                    value="1" oninput="mostrarValorMotor(this.value)" />
+                                <output class="valor-output" id="outputVelocidad" for="velocidad"></output>
+                    
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </section> 
+        
+    </main>
+    <script src="{{ url_for('static', filename='particles.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    
+</body>
+</html>

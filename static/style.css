@@ -1,0 +1,131 @@
+:root {
+    --oscuro: #000000;
+    --blanco: #fff;
+    --secundario: #979797;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--oscuro);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+#particles-js {
+    height: 100vh;
+    width:100%;
+    position: fixed;
+    z-index: -1;
+}
+
+header {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem;
+}
+
+.navegacion {
+    display: flex;
+    height: 5rem;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 0;
+    border: solid 1px;
+    border-color: var(--secundario);
+}
+
+.nav-enlace {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 20px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-enlace:hover {
+    color: var(--oscuro);
+    background-color: var(--blanco);
+}
+
+.nav-enlace_activo,
+.nav-enlace_activo :not(:hover) {
+    color: yellow; 
+}
+
+
+
+.contenedor {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    width: 70rem;
+    margin: auto;
+}
+
+.titulo {
+    margin-top: 0;
+    color: var(--blanco); /* Utiliza tu variable de color blanco */
+    text-align:center;
+}
+
+img {
+    width: 20rem;
+    height:auto;
+    
+}
+
+
+h2,
+p{
+    color: var(--blanco);
+}
+
+.tittle--label__servo,
+.tittle--label{
+    color: var(--blanco);
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+
+.tittle--input__servo,
+.tittle--input{
+    color: var(--blanco);
+    font-size: 1rem;
+}
+
+.container{
+    border: solid;
+    border-color: var(--blanco);
+    border-radius:2rem;
+    margin: auto;
+    width:60rem;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.seccion--motor_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.valor-output-angulo,
+.valor-output{
+    color: azure;
+}
+
